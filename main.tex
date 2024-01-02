@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{
+   breaklines=true,
+   basicstyle=\ttfamily}
+\newenvironment{true}{%
+    \begin{minipage}[t]{0.48\textwidth}%
+}{%
+    \end{minipage}%
+}
+\lstnewenvironment{forthel}[1][]{
+    \hfill \minipage[t]{0.48\textwidth}
+    \vspace*{-1.225\baselineskip}
+}{%
+    \endminipage
+}
+
+\newtheorem*{claim}{Claim}
+\title{UM 204 \\
+{\Large With ForTheL}}
+\author{Mrigank Pawagi}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+
+\input{sections/number_systems.tex}
+
+\end{document}
