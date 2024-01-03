@@ -2,9 +2,31 @@
 
 \subsection{Natural Numbers}
 
+\subsubsection{Definition}
 \begin{true}
-This is a left-aligned minipage with 50\% width. You can put any content here, and it will be left-aligned within the minipage.
+A relation $R$ on $A$ is a \textbf{partial order} if it satisfies
+\begin{itemize}
+    \item Reflexivity, i.e., $xRy \ \forall x \in A$
+    \item Anti-symmetry, i.e., $xRy \land yRx \implies x = y \ \forall x,y \in A$
+    \item Transitivity, i.e., $xRy \land yRz \implies xRz \ \forall x,y,z \in A$
+\end{itemize}
+Additionally, if $R$ satisfies
+\begin{itemize}
+    \item $xRy$ or $yRx \ \forall x,y \in A$
+\end{itemize}
+then $R$ is an \textbf{order} (or total order) on $A$. A set with a partial order is called a partially ordered set or \textbf{poset}, and a set with a total order is called an ordered set or \textbf{totally ordered set}.
 \end{true}
 \begin{forthel}
-This is a right-aligned minipage with 50% width. You can put any content here, and it will be left-aligned within the minipage.
+[set/sets] [element/elements]
+[belong/belongs]
+
+Signature SetSort.
+    A set is a notion.
+
+Signature ElmSort.
+    Let S be a set.
+    An element of S is a notion.
+
+Let x belongs to y stand for (x is an element of y).
+Let x is in y stand for (x belongs to y).
 \end{forthel}
