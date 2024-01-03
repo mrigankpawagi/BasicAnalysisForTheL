@@ -2,6 +2,19 @@
 
 \subsection{Natural Numbers}
 
+\subsubsection{Definition}
+% TODO: Add definition of natural numbers
+
+\begin{true}
+
+\end{true}
+\begin{forthel}
+Definition DefNaturalNumbers.
+    ...
+
+Let N denote (the set of natural numbers).
+\end{forthel}
+
 \subsection{Relations}
 
 \subsubsection{Definition}
@@ -110,5 +123,14 @@ where $R$ is the equivalence relation on $\mathbb{N} \times \mathbb{N}$ defined 
 \end{align*}
 \end{true}
 \begin{forthel}
+Definition DefIntegers.
+    Let R be the relation on NxN such that
+    for every (a << NxN, b << NxN, c << NxN, d << NxN)
+    ((a,b)R(c,d) <=> a + d = b + c).
+    The set of integers is the set Z such that
+    for every x (x is an element of Z <=> (for some (a << NxN) x = [a](R))).
 
+Let Z denote (the set of integers).
 \end{forthel}
+
+\subsection{Rational Numbers}
