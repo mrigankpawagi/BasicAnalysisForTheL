@@ -17,16 +17,25 @@ Additionally, if $R$ satisfies
 then $R$ is an \textbf{order} (or total order) on $A$. A set with a partial order is called a partially ordered set or \textbf{poset}, and a set with a total order is called an ordered set or \textbf{totally ordered set}.
 \end{true}
 \begin{forthel}
-[set/sets] [element/elements]
-[belong/belongs]
+Definition DefPartialOrderOn.
+    Let A be a set.
+    A partial order on A is a relation R on A such that
+    R is reflexive and R is antisymmetric and R is transitive.
 
-Signature SetSort.
-    A set is a notion.
+Definition DefOrderOn.
+    Let A be a set.
+    An order on A is a relation R on A such that
+    (R is a partial order on A) and ((xRy or yRx) for every (x << A, y << A)).
 
-Signature ElmSort.
-    Let S be a set.
-    An element of S is a notion.
+Let R is a total order on A denote (R is an order on A).
 
-Let x belongs to y stand for (x is an element of y).
-Let x is in y stand for (x belongs to y).
+Definition DefPartiallyOrderedSet
+    A partially ordered set is a pair (A,R) such that A is a set and R is a partial order on A.
+
+Let (A,R) is a poset denote ((A,R) is a partially ordered set).
+
+Definition DefTotallyOrderedSet.
+    A totally ordered set is a pair (A,R) such that A is a set and R is a total order on A.
+
+Let (A,R) is an ordered set denote ((A,R) is a totally ordered set).
 \end{forthel}

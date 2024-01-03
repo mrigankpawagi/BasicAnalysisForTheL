@@ -1,0 +1,69 @@
+\section*{ForTheL Preamble}
+
+\begin{forthelfull}
+[set/-s] [element/-s] [belong/-s]
+
+Signature Set. A set is a notion.
+Signature Element. 
+    Let S be a set.
+    An element of S is a notion.
+
+Let x << S denote (x is an element of S).
+Let x belongs to S denote (x is an element of S).
+
+Definition DefSubset. 
+    Let S be a set.
+    A subset of S is a set T such that every (x << T) belongs to S.
+
+Let S [= T denote (S is a subset of T).
+
+Definition DefPowerSet. 
+    Let S be a set.
+    The power set of S is the set P such that
+    for every (x << P) x is a subset of S.
+
+Let P = 2^S denote (P is the power set of S).
+
+[pair/-s]
+
+Signature Pair. A pair is a notion.
+
+Signature FirstElementPair.
+    Let Q be a pair.
+    The first element of Q is a notion.
+
+Signature SecondElementPair.
+    Let Q be a pair.
+    The second element of Q is a notion.
+
+Let Q = (x,y) denote (Q is a pair and x is the first element of Q and y is the second element of Q).
+Let (x,y) denote (for some pair Q x is the first element of Q and y is the second element of Q).
+
+Definition DefCartesianProduct. 
+    Let S,T be sets.
+    The cartesian product of S and T is the set U such that
+    ((x,y) << U) for every (x << S), (y << T).
+
+Let SxT denote (the cartesian product of S and T).
+
+Definition DefRelationOn. 
+    Let S be a set.
+    A relation on S is a subset R of SxS.
+
+Let xRy denote ((x,y) << R).    
+
+Definition DefReflexiveRelationOn. 
+    Let S be a set.
+    A reflexive relation on S is a relation R on S such that
+    xRx for every (x << S).
+
+Definition DefAntiSymmetricRelationOn. 
+    Let S be a set.
+    An antisymmetric relation on S is a relation R on S such that
+    (xRy and yRx => x = y) for every (x << S, y << S).
+
+Definition DefTransitiveRelationOn.
+    Let S be a set.
+    A transitive relation on S is a relation R on S such that
+    (xRy and yRz => xRz) for every (x << S, y << S, z << S).
+\end{forthelfull}
