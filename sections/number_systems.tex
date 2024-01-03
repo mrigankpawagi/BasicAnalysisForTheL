@@ -17,6 +17,21 @@ Additionally, if $R$ satisfies
 then $R$ is an \textbf{order} (or total order) on $A$. A set with a partial order is called a partially ordered set or \textbf{poset}, and a set with a total order is called an ordered set or \textbf{totally ordered set}.
 \end{true}
 \begin{forthel}
+Definition DefReflexiveRelationOn. 
+    Let S be a set.
+    A reflexive relation on S is a relation R on S such that
+    xRx for every (x << S).
+
+Definition DefAntiSymmetricRelationOn. 
+    Let S be a set.
+    An antisymmetric relation on S is a relation R on S such that
+    (xRy and yRx => x = y) for every (x << S, y << S).
+
+Definition DefTransitiveRelationOn.
+    Let S be a set.
+    A transitive relation on S is a relation R on S such that
+    (xRy and yRz => xRz) for every (x << S, y << S, z << S).
+
 Definition DefPartialOrderOn.
     Let A be a set.
     A partial order on A is a relation R on A such that
