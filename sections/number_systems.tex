@@ -2,6 +2,8 @@
 
 \subsection{Natural Numbers}
 
+\subsection{Relations}
+
 \subsubsection{Definition}
 \begin{true}
 A relation $R$ on $A$ is a \textbf{partial order} if it satisfies
@@ -53,4 +55,60 @@ Definition DefTotallyOrderedSet.
     A totally ordered set is a pair (A,R) such that A is a set and R is a total order on A.
 
 Let (A,R) is an ordered set denote ((A,R) is a totally ordered set).
+\end{forthel}
+
+\subsubsection{Definition}
+\begin{true}
+An \textbf{equivalence relation} on a set $A$ is a relation $R$ satisfying
+\begin{itemize}
+    \item Reflexivity
+    \item Symmetry, i.e., $xRy \implies yRx \ \forall x,y \in A$
+    \item Transitivity
+\end{itemize}
+\end{true}
+\begin{forthel}
+Definition DefSymmetricRelationOn. 
+    Let S be a set.
+    A symmetric relation on S is a relation R on S such that
+    (xRy => yRx) for every (x << S, y << S).
+
+Definition DefEquivalenceRelationOn.
+    Let S be a set.
+    An equivalence relation on S is a relation R on S such that
+    R is reflexive and R is symmetric and R is transitive.
+\end{forthel}
+
+\subsubsection{Definition}
+\begin{true}
+An \textbf{equivalence class} of an element $x$ of a set $A$ with respect to an equivalence relation $R$ on $A$ is defined as the set
+\begin{align*}
+    [x]_R = \{y \in A \mid xRy\}
+\end{align*}
+\end{true}
+\begin{forthel}
+Definition DefEquivalenceClassWithRespectTo.
+    Let S be a set.
+    Let R be an equivalence relation on S.
+    Let x be an element of S.
+    The equivalence class of x with respect to R is the set E
+    such that for every (y << S) (y is an element of E <=> xRy).
+
+Let [x](R) denote (the equivalence class of x with respect to R).
+\end{forthel}
+
+\subsection{Integers}
+
+\subsubsection{Definition}
+\begin{true}
+The set of integers is defined as
+\begin{align*}
+    \mathbb{Z} = \{ [x]_R \mid x \in \mathbb{N} \times \mathbb{N} \}
+\end{align*}
+where $R$ is the equivalence relation on $\mathbb{N} \times \mathbb{N}$ defined by
+\begin{align*}
+    (a,b)R(c,d) \iff a + d = b + c
+\end{align*}
+\end{true}
+\begin{forthel}
+
 \end{forthel}
